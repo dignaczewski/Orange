@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS public.baza1 CASCADE;
+CREATE TABLE IF NOT EXISTS public.baza1
+(
+    ID BIGINT,
+    NUMBER CHAR(9),
+    END_DT TIMESTAMP,
+    SEGMENT VARCHAR(10)
+)
+;
+
+CREATE OR REPLACE VIEW public.baza1_blocker AS
+SELECT 1 FROM public.baza1 LIMIT 1;
+
+DROP TABLE IF EXISTS public.baza2 CASCADE;
+CREATE TABLE IF NOT EXISTS public.baza2
+(
+    ID BIGINT,
+    NUMBER CHAR(9),
+    PLAN VARCHAR(3)
+)
+;
+
+CREATE OR REPLACE VIEW public.baza2_blocker AS
+SELECT 1 FROM public.baza2 LIMIT 1

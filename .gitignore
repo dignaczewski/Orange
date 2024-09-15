@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+sql/notebooks/DB_pass.env
 
 # Spyder project settings
 .spyderproject
